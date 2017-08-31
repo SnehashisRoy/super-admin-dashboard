@@ -1,0 +1,12 @@
+  <form #f="ngForm" class="form-inline"(ngSubmit)=createNewPermission(f)>
+    <div class="form-group">
+      <input type="text" class="form-control" id="permission" name="name" placeholder="new permission" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Permission</button>
+  </form>
+  <hr>
+  <div *ngIf="permissions">
+      <div *ngFor="let permission of permissions">
+        <h5>{{permission.name}}</h5>
+      </div>
+  </div>

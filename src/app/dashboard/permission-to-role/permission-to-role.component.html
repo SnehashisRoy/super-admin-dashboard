@@ -1,0 +1,11 @@
+
+<div class="row">
+  <div class="col-md-4" *ngIf="roles">
+    <div *ngFor="let role of roles">
+       <a [routerLink]="['/dashboard/permission-to-role/', role.id]"style="cursor: pointer">{{role.name}}</a>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>

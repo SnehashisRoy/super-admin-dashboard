@@ -1,0 +1,12 @@
+<div class="contianer">
+  <h1 class="text-center"> Welcome to Dashboard</h1>
+    <ul class="nav nav-tabs">
+      <li [class.active]= false><a [routerLink]="['/dashboard/users']">Users</a></li>
+      <li><a [routerLink]="['/dashboard/createrole']">Create Role</a></li>
+      <li><a [routerLink]="['/dashboard/create-permission']">Create Permission</a></li>
+      <li><a [routerLink]="['/dashboard/permission-to-role']">Assign Permissions To Role</a></li>
+      
+    </ul>
+  
+</div>
+<router-outlet></router-outlet>

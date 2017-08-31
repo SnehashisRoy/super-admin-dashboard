@@ -1,0 +1,18 @@
+
+                 <div *ngIf="allStatus">
+                    <form #f="ngForm" (ngSubmit)=onSubmit()>
+                      <div *ngFor="let status of allStatus">
+                          <div *ngIf="status">
+                            <div class="form-group">
+                              <input type="checkbox" [name]="status.name"  [value]="status.id" [(ngModel)]="status.status">
+                              <label>{{status.name}}</label>
+                            </div>
+                          </div>
+                      </div>
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                      {{f.value|json}}
+                    </form>
+                </div>
+              

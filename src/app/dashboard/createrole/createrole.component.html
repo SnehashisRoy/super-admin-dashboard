@@ -1,0 +1,17 @@
+
+
+  <form #f="ngForm" class="form-inline"(ngSubmit)=createNewRole(f)>
+    <div class="form-group">
+      <input type="text" class="form-control" id="role" name="name" placeholder="new role" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Role</button>
+  </form>
+
+
+<hr>
+<div *ngIf="roles">
+    <div *ngFor="let role of roles">
+       <h5>{{role.name}}</h5>
+        
+    </div>
+</div>
